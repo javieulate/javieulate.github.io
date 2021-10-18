@@ -29,8 +29,20 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+section {
+	padding-top: 20px;
+}
 body {
 	line-height: 1;
+}
+
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
 }
 
 ol, ul {
@@ -58,6 +70,19 @@ body {
 mark {
 	background-color: transparent;
 	color: inherit;
+}
+
+details > summary {
+  background-color: #ded1be;
+  padding: .5rem 1rem;
+}
+
+details summary { 
+  cursor: pointer;
+}
+
+details summary > * {
+  display: inline;
 }
 
 input::-moz-focus-inner {
