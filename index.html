@@ -23,15 +23,15 @@
 					<h1><strong>De Santo Domingo</strong></h1>
 					<h1 data-translatable>ADE + Ingeniería Informática /i18n/ Business Administration + Computer Engineering</h1>
 					<h1 data-translatable>Fin de estudios: Feb. 2022 /i18n/ End of studies: Feb. 2022</h1>
-					<a id="cves" href="CV_Javier Álvarez de Eulate_ES.pdf" class="button icon solid fa-download">CV - Castellano <i class="fas fa-file-pdf"></i></a>
-					<a id="cven" style="display: none;" href="CV_Javier Álvarez de Eulate_EN.pdf" class="button icon solid fa-download">CV - English <i class="fas fa-file-pdf"></i></a>
+					<a id="cves" href="CV_Javier Álvarez de Eulate_ES.pdf" class="button icon solid fa-download">CV - Spanish <i class="fas fa-file-pdf"></i></a>
+					<a id="cven" href="CV_Javier Álvarez de Eulate_EN.pdf" class="button icon solid fa-download">CV - English <i class="fas fa-file-pdf"></i></a>
 				</div>
 			</header>
 		<!-- Main -->
 			<div id="main">
 				<div align="right">
-			      <input id="es-btn" type="image" src="images/cast.png" name="submit" width="23" height="23" alt="submit"/>
-			      <input id="en-btn" onclick="myFunction()" type="image" src="images/ingles.jpg" name="submit" width="23" height="23" alt="submit"/>
+			      <input id="es-btn" type="image" title="Castellano" src="images/cast.png" name="submit" width="23" height="23" alt="submit"/>
+			      <input id="en-btn" type="image" title="English" src="images/ingles.jpg" name="submit" width="23" height="23" alt="submit"/>
 			    </div>
 				<details open>
 					<summary><h2 data-translatable>Preámbulo /i18n/ Preamble </h2> <h2><i class="fas fa-hourglass-start"></i></h2></summary>
@@ -317,38 +317,12 @@
 		        defaultLanguage: 'es'
 		      });
 
-		      function deleteCV(lang) {
-			      var x = document.getElementById(lang);
-			      if (x.style.display === "block") {
-			        x.style.display = "none";
-			      } else {
-			        x.style.display = "none";
-			      }
-			      x.style.height = '44px';
-				  x.style.width= '165px';
-				  x.style.alignItems= 'center';
-			    }
-			    function appearCV(lang) {
-			      var x = document.getElementById(lang);
-			      if (x.style.display === "none") {
-			        x.style.display = "block";
-			      } else {
-			        x.style.display = "block";
-			      }
-			      x.style.height = '44px';
-				  x.style.width= '165px';
-				  x.style.alignItems= 'center';
-			    }
 		      esButton.onclick = function () {
 		        i18n.changeLanguage('es');
-		        deleteCV('cven');
-		        appearCV('cves');
 		      };
 
 		      enButton.onclick = function () {
 		        i18n.changeLanguage('en');
-		        deleteCV('cves');
-		        appearCV('cven');
 		      };
 
 		    </script>
