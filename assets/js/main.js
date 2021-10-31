@@ -160,3 +160,13 @@ for (let item of items) {
   item.addEventListener("keypress", toggleItem, false);
 }
 document.addEventListener("click", closeSubmenu, false);
+
+function ocultar(id){
+    var elemento = document.getElementById(id);
+    elemento.style.display = "none";
+}
+
+function aparecer(id){
+    var elemento = document.getElementById(id);
+    elemento.style.display = "block";
+}

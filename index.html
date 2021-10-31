@@ -21,10 +21,11 @@
 					<h1><strong>Javier</strong></h1>
 					<h1><strong>Álvarez de Eulate</strong></h1>
 					<h1><strong>De Santo Domingo</strong></h1>
-					<h1 data-translatable>EAZ + Informatika Ingeniaritza /i18n/ ADE + Ingeniería Informática /i18n/ Business Administration + Computer Engineering</h1>
+					<h1 data-translatable>EAZ + Informatika Ingeniaritza /i18n/ ADE + Ingeniería Informática /i18n/ BA + Computer Engineering</h1>
 					<h1 data-translatable>Ikasketen amaiera: Ots. 2022 /i18n/ Fin de estudios: Feb. 2022 /i18n/ End of studies: Feb. 2022</h1>
-					<a id="cves" href="CV_Javier Álvarez de Eulate_ES.pdf" class="button icon solid fa-download">CV - Spanish <i class="fas fa-file-pdf"></i></a>
-					<a id="cven" href="CV_Javier Álvarez de Eulate_EN.pdf" class="button icon solid fa-download">CV - English <i class="fas fa-file-pdf"></i></a>
+					<a id="cveus" href="CV_Javier Álvarez de Eulate_EUS.pdf" class="button icon solid fa-download" style="display: none;">CV - Euskera <i class="fas fa-file-pdf"></i></a>
+					<a id="cves" href="CV_Javier Álvarez de Eulate_ES.pdf" class="button icon solid fa-download">CV - Castellano <i class="fas fa-file-pdf"></i></a>
+					<a id="cven" href="CV_Javier Álvarez de Eulate_EN.pdf" class="button icon solid fa-download" style="display: none;">CV - English <i class="fas fa-file-pdf"></i></a>
 				</div>
 			</header>
 		<!-- Main -->
@@ -331,6 +332,25 @@
 		        i18n.changeLanguage('en');
 		      };
 
+		    </script>
+		    <script>
+		      $(function(){
+		      	$('#eus-btn').click(function(){
+		          $('#cveus').show();
+		          $('#cves').hide();
+		          $('#cven').hide();
+		        });
+		        $('#es-btn').click(function(){
+		          $('#cves').show();
+		          $('#cveus').hide();
+		          $('#cven').hide();
+		        });
+		        $('#en-btn').click(function(){
+		          $('#cven').show();
+		          $('#cveus').hide();
+		          $('#cves').hide();
+		        });
+		      })
 		    </script>
 	</body>
 </html>
