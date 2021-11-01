@@ -3524,3 +3524,8 @@ body {
       opacity: 0.3;
       filter: alpha(opacity=30);
     }
+
+summary:hover{
+      opacity: 0.3;
+      filter: alpha(opacity=30);
+    }
