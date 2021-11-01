@@ -24,7 +24,7 @@
 					<h1 data-translatable>EAZ + Informatika Ingeniaritza /i18n/ ADE + Ingeniería Informática /i18n/ BA + Computer Engineering</h1>
 					<h1 data-translatable>Ikasketen amaiera: Ots. 2022 /i18n/ Fin de estudios: Feb. 2022 /i18n/ End of studies: Feb. 2022</h1>
 					<a id="cveus" href="CV_Javier Álvarez de Eulate_EUS.pdf" class="button icon solid fa-download" style="display: none;">CV - Euskera <i class="fas fa-file-pdf"></i></a>
-					<a id="cves" href="CV_Javier Álvarez de Eulate_ES.pdf" class="button icon solid fa-download" style="display: none;">CV - Castellano <i class="fas fa-file-pdf"></i></a>
+					<a id="cves" href="CV_Javier Álvarez de Eulate_ES.pdf" class="button icon solid fa-download">CV - Castellano <i class="fas fa-file-pdf"></i></a>
 					<a id="cven" href="CV_Javier Álvarez de Eulate_EN.pdf" class="button icon solid fa-download" style="display: none;">CV - English <i class="fas fa-file-pdf"></i></a>
 				</div>
 			</header>
@@ -44,7 +44,13 @@
 			      	</div>
 			    </div>
 				<details open>
-					<summary><h2 data-translatable>Itzulingurua  /i18n/ Preámbulo  /i18n/ Preamble </h2> <h2><i class="fas fa-hourglass-start"></i></h2></summary>
+					<summary>
+						<h2 data-translatable>Itzulingurua  /i18n/ Preámbulo  /i18n/ Preamble </h2> <h2><i class="fas fa-hourglass-start"></i></h2>
+						<h1><i class="fas fa-volume-mute" id="cancelPre" style="float:right; margin-right: 0.2em;"></i></h1>
+						<h1><i id="preES" class="fas fa-volume-up" style="float:right; margin-right: 0.5em;"></i></h1>
+						<h1><i id="preEN" class="fas fa-volume-up" style="display:none; float:right; margin-right: 0.5em;"></i></h1>
+						<h1><i id="preEUS" class="fas fa-volume-up" onclick="euskeraEZ()" style="display:none; float:right; margin-right: 0.5em;"></i></h1>
+					</summary>
 					<section id="prefacio">
 						<p data-translatable>Eskaintzen zaizkigun aukerak gero eta handiagoak diren mundu honetan, bi gradu ikasi ahal izateko zortea izan nuen, oso ondo osatzen diren bi karrerekin: EAZ eta Informatika Ingeniaritza. /i18n/ En un mundo en el que cada vez más las posibilidades que se nos ofrecen son inmensas, tuve la suerte de poder estudiar un doble grado con dos carreras que se complementan muy bien: ADE e Ingeniería Informática. /i18n/ In a world where more and more possibilities are being offered to us, I was lucky enough to be able to study a double degree with two degrees that complement each other very well: Business Administration and Computer Engineering.</p>
 						<p data-translatable>Unibertsitatean izan dudan esperientzia oso positiboa izan da, maila akademikoan zein pertsonalean, eta orain, nire prestakuntzaren azken urratsetan nagoenez, argiago ikusten dut nora bideratu nahiko nukeen nire etorkizun profesionala. /i18n/ Mi experiencia en la Universidad ha sido muy positiva, tanto a nivel académico como personal, y ahora que me encuentro en los últimos compases de mi formación, veo con mayor claridad hacia dónde me gustaría orientar mi futuro profesional. /i18n/ My experience at the University has been very positive, both academically and personally, and now that I am in the final stages of my education, I see more clearly where I would like to direct my professional future.</p>
@@ -53,7 +59,13 @@
 					</section>
 				</details>
 				<details>
-					<summary><h2 data-translatable>Trebetasunak  /i18n/ Habilidades  /i18n/ Skills </h2><h2><i class="fas fa-check-square"></i></h2></summary>
+					<summary>
+						<h2 data-translatable>Trebetasunak  /i18n/ Habilidades  /i18n/ Skills </h2><h2><i class="fas fa-check-square"></i></h2>
+						<h1><i class="fas fa-volume-mute" id="cancelHab" style="float:right; margin-right: 0.2em;"></i></h1>
+						<h1><i id="habES" class="fas fa-volume-up" style="float:right; margin-right: 0.5em;"></i></h1>
+						<h1><i id="habEN" class="fas fa-volume-up" style="display:none; float:right; margin-right: 0.5em;"></i></h1>
+						<h1><i id="habEUS" class="fas fa-volume-up" onclick="euskeraEZ()" style="display:none; float:right; margin-right: 0.5em;"></i></h1>
+					</summary>
 					<section id="habilidades">
 						<div>
 						<div class="table-wrapper">
@@ -96,7 +108,13 @@
 					</details>
 
 					<details>
-					<summary><h2 data-translatable>Esperientzia  /i18n/ Experiencia  /i18n/ Experience </h2><h2><i class="fas fa-suitcase"></i></h2></summary>
+					<summary>
+						<h2 data-translatable>Esperientzia  /i18n/ Experiencia  /i18n/ Experience </h2><h2><i class="fas fa-suitcase"></i></h2>
+						<h1><i class="fas fa-volume-mute" id="cancelExp" style="float:right; margin-right: 0.2em;"></i></h1>
+						<h1><i id="expES" class="fas fa-volume-up" style="float:right; margin-right: 0.5em;"></i></h1>
+						<h1><i id="expEN" class="fas fa-volume-up" style="display:none; float:right; margin-right: 0.5em;"></i></h1>
+						<h1><i id="expEUS" class="fas fa-volume-up" onclick="euskeraEZ()" style="display:none; float:right; margin-right: 0.5em;"></i></h1>
+					</summary>
 					<section id="experiencia">
 						<div class="row">
 							<article class="col-6 col-12-xsmall work-item">
@@ -143,7 +161,7 @@
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/logo jai.png" class="image fit thumb"><img src="images/logo jai.png" alt="" /></a>
-								<h3 data-translatable>Boluntariotza Jesusen Atzetik Ibiltari taldean (JAI) /i18n/Voluntariado en Jesusen Atzetik Ibiltari (JAI) /i18n/ Volunteering in Jesusen Atzetik Ibiltari (JAI)</h3>
+								<h3 data-translatable>Boluntariotza Jesusen Atzetik Ibiltari taldean (JAI) /i18n/ Voluntariado en Jesusen Atzetik Ibiltari (JAI) /i18n/ Volunteering in Jesusen Atzetik Ibiltari (JAI)</h3>
 								<p data-translatable>Aldapeta María Ikastetxeko haur eta gazteentzako aisialdi taldeko monitorea eta animatzailea. /i18n/ Monitor y animador de Grupo de Tiempo Libre Infantil y Juvenil del Colegio Aldapeta María Ikastetxea. /i18n/ Monitor and animator of the children's and young people's leisure time group at the Aldapeta María Ikastetxea School.</p>
 								<p data-translatable>2016ko Iraila - Gaurkotasuna /i18n/ Septiembre 2016 - Actualidad /i18n/ September 2016 - Nowadays</p>
 							</article>
@@ -164,7 +182,13 @@
 					</details>
 
 					<details>
-					<summary><h2 data-translatable>Ibilbide profesionala  /i18n/ Trayectoria Profesional  /i18n/ Professional Career </h2><h2><i class="fas fa-calendar-alt"></i></h2></summary>
+					<summary>
+						<h2 data-translatable>Ibilbide profesionala  /i18n/ Trayectoria Profesional  /i18n/ Professional Career </h2><h2><i class="fas fa-calendar-alt"></i></h2>
+						<h1><i class="fas fa-volume-mute" id="cancelProf" style="float:right; margin-right: 0.2em;"></i></h1>
+						<h1><i id="profES" class="fas fa-volume-up" style="float:right; margin-right: 0.5em;"></i></h1>
+						<h1><i id="profEN" class="fas fa-volume-up" style="display:none; float:right; margin-right: 0.5em;"></i></h1>
+						<h1><i id="profEUS" class="fas fa-volume-up" onclick="euskeraEZ()" style="display:none; float:right; margin-right: 0.5em;"></i></h1>
+					</summary>
 					<section id="trayectoria">
 						<div class="container">
 							<div class="timeline-item" date-is='Sept 2021 - Feb 2022'>
@@ -193,7 +217,13 @@
 					</details>
 
 					<details>
-					<summary><h2 data-translatable>Hizkuntzak  /i18n/ Idiomas  /i18n/ Languages  </h2><h2><i class="fas fa-language"></i></h2></summary>
+					<summary>
+						<h2 data-translatable>Hizkuntzak  /i18n/ Idiomas  /i18n/ Languages  </h2><h2><i class="fas fa-language"></i></h2>
+						<h1><i class="fas fa-volume-mute" id="cancelLang" style="float:right; margin-right: 0.2em;"></i></h1>
+						<h1><i id="langES" class="fas fa-volume-up" style="float:right; margin-right: 0.5em;"></i></h1>
+						<h1><i id="langEN" class="fas fa-volume-up" style="display:none; float:right; margin-right: 0.5em;"></i></h1>
+						<h1><i id="langEUS" class="fas fa-volume-up" onclick="euskeraEZ()" style="display:none; float:right; margin-right: 0.5em;"></i></h1>
+					</summary>
 					<section id="idiomas">
 						<div class="table-wrapper">
 							<table>
@@ -222,7 +252,14 @@
 					</details>
 
 					<details>
-					<summary><h2 data-translatable>Kontaktua  /i18n/ Contacto  /i18n/ Contact </h2><h2><i class="far fa-address-book"></i></h2></summary>
+					<summary>
+						<h2 data-translatable>Kontaktua  /i18n/ Contacto  /i18n/ Contact </h2>
+						<h2><i class="far fa-address-book"></i></h2>
+						<h1><i class="fas fa-volume-mute" id="cancelContact" style="float:right; margin-right: 0.2em;"></i></h1>
+						<h1><i id="contactES" class="fas fa-volume-up" style="float:right; margin-right: 0.5em;"></i></h1>
+						<h1><i id="contactEN" class="fas fa-volume-up" style="display:none; margin-right: 0.5em; float:right;"></i></h1>
+						<h1><i id="contactEUS" class="fas fa-volume-up" onclick="euskeraEZ()" style="display:none; float:right; margin-right: 0.5em;"></i></h1>
+					</summary>
 					<section id="contacto">
 						<blockquote data-translatable>Informazio gehiago nahi izanez gero, zure esanetara naukazu bide hauetan: /i18n/ Para más información, quedo a su disposición en estos canales: /i18n/ For further information, I remain at your disposal on these channels:</blockquote>
 						<p></p>
@@ -294,7 +331,6 @@
 			<script src="http://code.jquery.com/jquery-latest.js"></script>
 			<script src='https://cdn.rawgit.com/mburakerman/prognroll/master/src/prognroll.js'></script>
 			<script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
-			<script src="assets/js/audio.js"></script>
 			<script type='text/javascript'>
 			$("body").prognroll({
 			    height: 5,        
@@ -340,26 +376,194 @@
 		      enButton.onclick = function () {
 		        i18n.changeLanguage('en');
 		      };
-
+		    </script>
+		    <script>
+		    	function euskeraEZ() {
+				  alert("Aukera ez dago eskuragarri, barkatu eragozpenak.");
+				}
 		    </script>
 		    <script>
 		      $(function(){
 		      	$('#eus-btn').click(function(){
 		          $('#cveus').show();
+		          $('#preEUS').show();
+		          $('#profEUS').show();
+		          $('#habEUS').show();
+		          $('#langEUS').show();
+		          $('#expEUS').show();
+		          $('#contactEUS').show();
 		          $('#cves').hide();
 		          $('#cven').hide();
+		          $('#preES').hide();
+		          $('#profES').hide();
+		          $('#habES').hide();
+		          $('#langES').hide();
+		          $('#expES').hide();
+		          $('#contactES').hide();
+		          $('#preEN').hide();
+		          $('#profEN').hide();
+		          $('#habEN').hide();
+		          $('#langEN').hide();
+		          $('#expEN').hide();
+		          $('#contactEN').hide();
 		        });
 		        $('#es-btn').click(function(){
 		          $('#cves').show();
+		          $('#preES').show();
+		          $('#profES').show();
+		          $('#habES').show();
+		          $('#langES').show();
+		          $('#contactES').show();
+		          $('#expES').show();
 		          $('#cveus').hide();
 		          $('#cven').hide();
+		          $('#preEUS').hide();
+		          $('#profEUS').hide();
+		          $('#habEUS').hide();
+		          $('#langEUS').hide();
+		          $('#expEUS').hide();
+		          $('#contactEUS').hide();
+		          $('#preEN').hide();
+		          $('#profEN').hide();
+		          $('#habEN').hide();
+		          $('#langEN').hide();
+		          $('#expEN').hide();
+		          $('#contactEN').hide();
 		        });
 		        $('#en-btn').click(function(){
 		          $('#cven').show();
+		          $('#preEN').show();
+		          $('#profEN').show();
+		          $('#expEN').show();
+		          $('#habEN').show();
+		          $('#langEN').show();
+		          $('#contactEN').show();
 		          $('#cveus').hide();
 		          $('#cves').hide();
+		          $('#preES').hide();
+		          $('#profES').hide();
+		          $('#habES').hide();
+		          $('#langES').hide();
+		          $('#expES').hide();
+		          $('#contactES').hide();
+		          $('#preEUS').hide();
+		          $('#profEUS').hide();
+		          $('#habEUS').hide();
+		          $('#langEUS').hide();
+		          $('#expEUS').hide();
+		          $('#contactEUS').hide();
 		        });
 		      })
+		    </script>
+		    <script>
+			    var msg = new SpeechSynthesisUtterance();
+				var voices = window.speechSynthesis.getVoices();
+				msg.voice = voices[10]; 
+				msg.volume = 1; // From 0 to 1
+				msg.rate = 0.9; // From 0.1 to 10
+				msg.pitch = 1.5; // From 0 to 2
+				
+				var cancelPre = document.getElementById('cancelPre');
+				cancelPre.onclick = function () {
+			        speechSynthesis.cancel();
+			      };
+
+			    var cancelHab = document.getElementById('cancelHab');
+				cancelHab.onclick = function () {
+			        speechSynthesis.cancel();
+			      };
+
+			    var cancelExp = document.getElementById('cancelExp');
+				cancelExp.onclick = function () {
+			        speechSynthesis.cancel();
+			      };
+
+			    var cancelProf = document.getElementById('cancelProf');
+				cancelProf.onclick = function () {
+			        speechSynthesis.cancel();
+			      };
+
+			    var cancelLang = document.getElementById('cancelLang');
+				cancelLang.onclick = function () {
+			        speechSynthesis.cancel();
+			      };
+				var cancelContact = document.getElementById('cancelContact');
+				cancelContact.onclick = function () {
+			        speechSynthesis.cancel();
+			      };
+
+				var preES = document.getElementById('preES');
+				preES.onclick = function () {
+					msg.lang = 'es';
+					msg.text = "En un mundo en el que cada vez más las posibilidades que se nos ofrecen son inmensas, tuve la suerte de poder estudiar un doble grado con dos carreras que se complementan muy bien: ADE e Ingeniería Informática. Mi experiencia en la Universidad ha sido muy positiva, tanto a nivel académico como personal, y ahora que me encuentro en los últimos compases de mi formación, veo con mayor claridad hacia dónde me gustaría orientar mi futuro profesional. Respecto al grado en ADE, tengo especial predilección por el mundo financiero, sin embargo, estoy abierto a cualquier otra área en la que me resultaría muy interesante poder aplicar mis conocimientos en Ingeniería Informática. Respecto a este segundo grado, tengo particular interés en los ámbitos de Ciberseguridad y gestión de Bases de Datos. Considero que ADE e Ingeniería Informática están obligadas a entenderse, más aún en un contexto encaminado a que las diversas organizaciones desarrollen su actividad económica de forma remota. Por eso, creo adecuado que las empresas se apoyen en profesionales que, al contar con este doble perfil, puedan aportar una visión global de ambas disciplinas intentando así sumar nuevas posibilidades a las que ya existen en el mundo actual.";
+			        speechSynthesis.speak(msg);
+			      };
+			    var preEN = document.getElementById('preEN');
+				preEN.onclick = function () {
+					msg.lang = 'en';
+					msg.text = "In a world where more and more possibilities are being offered to us, I was lucky enough to be able to study a double degree with two degrees that complement each other very well: Business Administration and Computer Engineering. My experience at the University has been very positive, both academically and personally, and now that I am in the final stages of my education, I see more clearly where I would like to direct my professional future. Regarding the Business Administration degree, I have a special predilection for the financial world, however, I am open to any other area in which I would be very interesting to apply my knowledge in Computer Engineering. Regarding this second degree, I am particularly interested in the areas of Cybersecurity and Database management. I believe that Business Administration and Computer Engineering are obliged to understand each other, even more so in a context in which the various organizations develop their economic activity remotely. Therefore, I think it is appropriate for companies to rely on professionals who, having this dual profile, can provide a global vision of both disciplines, thus trying to add new possibilities to those that already exist in today's world.";
+			        speechSynthesis.speak(msg);
+			      };
+			    var habES = document.getElementById('habES');
+				habES.onclick = function () {
+					msg.lang = 'es';
+					msg.text = "Organización y Planificación. Trabajo en Equipo. Calidad de Procesos. Proactividad. Adaptación al Entorno. Experiencia";
+			        speechSynthesis.speak(msg);
+			      };
+			    var habEN = document.getElementById('habEN');
+				habEN.onclick = function () {
+					msg.lang = 'en';
+					msg.text = "Organization and Planning. Teamwork. Process Quality. Proactivity. Adaptation to Environment. Experience";
+			        speechSynthesis.speak(msg);
+			      };
+			    var expES = document.getElementById('expES');
+				expES.onclick = function () {
+					msg.lang = 'es';
+					msg.text = "Doble Grado en ADE + Ingeniería Informática. Movilidad Internacional en Universidad de Bocconi. TFG de ADE en AquaDat, galardonado con el Premio Sebastián Iruretagoyena al mejor trabajo de fin de grado en ADE 2020-21. TFG de Ingeniería Informática en Vicomtech. Seleccionado para el programa Gipuzkoa Talent. Prácticas curriculares en Swap Energía. Cursando el programa Honors Program. Voluntariado en Jesusen Atzetik Ibiltari (JAI). Voluntariado en Club de Montaña Aldapeta (CMA). Entrenador de Deporte Escolar.";
+			        speechSynthesis.speak(msg);
+			      };
+			    var expEN = document.getElementById('expEN');
+				expEN.onclick = function () {
+					msg.lang = 'en';
+					msg.text = "Double Degree in Business Administration + Computer Engineering. International Mobility at Bocconi University. End-of-degree project in Business Administration at AquaDat, awarded with the Sebastián Iruretagoyena Award for the best final year project in Business Administration 2020-21. End-of-degree project in Computer Engineering at Vicomtech. Selected for the Gipuzkoa Talent Programme. Internship at Swap Energía. Coursing the Honors Program. Volunteering in Jesusen Atzetik Ibiltari (JAI). Volunteering at Club de Montaña Aldapeta (CMA). School Sport Coach";
+			        speechSynthesis.speak(msg);
+			      };
+			    var profES = document.getElementById('profES');
+				profES.onclick = function () {
+					msg.lang = 'es';
+					msg.text = "Movilidad Internacional en la Universidad de Bocconi (Milán). Prácticas Extracurriculares en Vicomtech. Proyecto de Fin de Grado en ADE en AquaDat. Prácticas Curriculares en Swap Energía. Título de monitor de Tiempo Libre en Educación Infantil y Juvenil (Institut Valencià de la Joventut, IVAJ). ADE + Ingeniería Informática en la Universidad de Deusto (San Sebastián). Bachillerato en el Colegio Aldapeta María Ikastetxea (San Sebastián)";
+			        speechSynthesis.speak(msg);
+			      };
+			    var profEN = document.getElementById('profEN');
+				profEN.onclick = function () {
+					msg.lang = 'en';
+					msg.text = "International Mobility at Bocconi University (Milan). Extracurricular Internships at Vicomtech. End-of-degree Project in Business Administration at AquaDat. Curricular Internship at Swap Energía. Certificate of Free Time Instructor in Children and Youth Education (Institut Valencià de la Joventut, IVAJ).. Business Administration + Computer Engineering at the University of Deusto (San Sebastián). High school at Aldapeta María Ikastetxea School (San Sebastián)";
+			        speechSynthesis.speak(msg);
+			      };
+				var langES = document.getElementById('langES');
+			    langES.onclick = function () {
+					msg.lang = 'es';
+					msg.text = "Castellano: Lengua materna. Inglés: Certificado de Proficiency en Inglés (nivel C2). Euskera: Euskeraren Gaitasun Agiria (nivel C1)";
+			        speechSynthesis.speak(msg);
+			      };
+			    var langEN = document.getElementById('langEN');
+			    langEN.onclick = function () {
+					msg.lang = 'en';
+					msg.text = "Spanish: Mother language. English: Certificate of Proficiency in English (level C2). Basque: Euskeraren Gaitasun Agiria (level C1)";
+			        speechSynthesis.speak(msg);
+			      };	
+			    var contactES = document.getElementById('contactES');
+				contactES.onclick = function () {
+					msg.lang = 'es';
+					msg.text = "Para más información, quedo a su disposición en estos canales:";
+			        speechSynthesis.speak(msg);
+			      };
+			    var contactEN = document.getElementById('contactEN');
+				contactEN.onclick = function () {
+					msg.lang = 'en';
+					msg.text = "For further information, I remain at your disposal on these channels:";
+			        speechSynthesis.speak(msg);
+			      };		    
 		    </script>
 	</body>
 </html>
