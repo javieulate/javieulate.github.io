@@ -32,7 +32,7 @@
 			<div id="main">
 				<div align="right">
 					<div id="eus-btn" class="pic">
-						<input type="image" title="Euskera" src="images/eus.PNG" width="55" height="18"/>
+						<input type="image" class="langClick" title="Euskera" src="images/eus.PNG" width="55" height="18"/>
 					</div>
 				  	<h1 class="barraIdioma">&#124</h1>
 				  	<div id="es-btn" class="pic">
@@ -368,14 +368,6 @@
 		      eusButton.onclick = function () {
 		        i18n.changeLanguage('eus');
 		      };
-
-		      esButton.onclick = function () {
-		        i18n.changeLanguage('es');
-		      };
-
-		      enButton.onclick = function () {
-		        i18n.changeLanguage('en');
-		      };
 		    </script>
 		    <script>
 		    	function euskeraEZ() {
@@ -455,13 +447,67 @@
 		        });
 		      })
 		    </script>
+
 		    <script>
-			    var msg = new SpeechSynthesisUtterance();
+		    	const IDIOMAS_PREFERIDOS = ["es-MX", "es-US", "es-ES", "es_US", "es_ES"];
+		    	var posibleIndice = 0, vocesDisponibles = [];
+
+		    	var msg = new SpeechSynthesisUtterance();
 				var voices = window.speechSynthesis.getVoices();
-				msg.voice = voices[10]; 
+				console.log({ vocesDisponibles }); 
 				msg.volume = 1; // From 0 to 1
-				msg.rate = 0.9; // From 0.1 to 10
-				msg.pitch = 1; // From 0 to 2
+				msg.rate = 1.1; // From 0.1 to 10
+				msg.pitch = 1.2; // From 0 to 2
+
+		    	function cargarVoces (){
+				    if (vocesDisponibles.length > 0) {
+				      console.log("No se cargan las voces porque ya existen: ", vocesDisponibles);
+				      return;
+				    }
+				    vocesDisponibles = speechSynthesis.getVoices();
+				    posibleIndice = vocesDisponibles.findIndex(voz => IDIOMAS_PREFERIDOS.includes(voz.lang));
+				    if (posibleIndice === -1) posibleIndice = 0;
+				  };
+
+				cargarVoces();
+				  // Si hay evento, entonces lo esperamos
+				  if ('onvoiceschanged' in speechSynthesis) {
+				    speechSynthesis.onvoiceschanged = function () {
+				      cargarVoces();
+				      console.log({ vocesDisponibles });
+				      msg.voice = vocesDisponibles[2];
+				    };
+				  }
+
+				var esButton = document.getElementById('es-btn');
+		      	var enButton = document.getElementById('en-btn');
+				esButton.onclick = function () {
+				  i18n.changeLanguage('es');
+		          cargarVoces();
+				  // Si hay evento, entonces lo esperamos
+				  if ('onvoiceschanged' in speechSynthesis) {
+				    speechSynthesis.onvoiceschanged = function () {
+				      cargarVoces();
+				      console.log({ vocesDisponibles });
+				    };
+				  }
+				  msg.voice = vocesDisponibles[2];
+		        };
+
+			    enButton.onclick = function () {
+			      i18n.changeLanguage('en');
+			      cargarVoces();
+				  // Si hay evento, entonces lo esperamos
+				  if ('onvoiceschanged' in speechSynthesis) {
+				    speechSynthesis.onvoiceschanged = function () {
+				      cargarVoces();
+				      console.log({ vocesDisponibles });
+				    };
+				   
+				  }
+				  msg.voice = vocesDisponibles[6]; 
+			    };
+				
 				
 				var cancelPre = document.getElementById('cancelPre');
 				cancelPre.onclick = function () {
@@ -496,72 +542,84 @@
 				preES.onclick = function () {
 					msg.lang = 'es';
 					msg.text = "En un mundo en el que cada vez más las posibilidades que se nos ofrecen son inmensas, tuve la suerte de poder estudiar un doble grado con dos carreras que se complementan muy bien: ADE e Ingeniería Informática. Mi experiencia en la Universidad ha sido muy positiva, tanto a nivel académico como personal, y ahora que me encuentro en los últimos compases de mi formación, veo con mayor claridad hacia dónde me gustaría orientar mi futuro profesional. Respecto al grado en ADE, tengo especial predilección por el mundo financiero, sin embargo, estoy abierto a cualquier otra área en la que me resultaría muy interesante poder aplicar mis conocimientos en Ingeniería Informática. Respecto a este segundo grado, tengo particular interés en los ámbitos de Ciberseguridad y gestión de Bases de Datos. Considero que ADE e Ingeniería Informática están obligadas a entenderse, más aún en un contexto encaminado a que las diversas organizaciones desarrollen su actividad económica de forma remota. Por eso, creo adecuado que las empresas se apoyen en profesionales que, al contar con este doble perfil, puedan aportar una visión global de ambas disciplinas intentando así sumar nuevas posibilidades a las que ya existen en el mundo actual.";
+					speechSynthesis.cancel();
 			        speechSynthesis.speak(msg);
 			      };
 			    var preEN = document.getElementById('preEN');
 				preEN.onclick = function () {
 					msg.lang = 'en';
 					msg.text = "In a world where more and more possibilities are being offered to us, I was lucky enough to be able to study a double degree with two degrees that complement each other very well: Business Administration and Computer Engineering. My experience at the University has been very positive, both academically and personally, and now that I am in the final stages of my education, I see more clearly where I would like to direct my professional future. Regarding the Business Administration degree, I have a special predilection for the financial world, however, I am open to any other area in which I would be very interesting to apply my knowledge in Computer Engineering. Regarding this second degree, I am particularly interested in the areas of Cybersecurity and Database management. I believe that Business Administration and Computer Engineering are obliged to understand each other, even more so in a context in which the various organizations develop their economic activity remotely. Therefore, I think it is appropriate for companies to rely on professionals who, having this dual profile, can provide a global vision of both disciplines, thus trying to add new possibilities to those that already exist in today's world.";
+					speechSynthesis.cancel();
 			        speechSynthesis.speak(msg);
 			      };
 			    var habES = document.getElementById('habES');
 				habES.onclick = function () {
 					msg.lang = 'es';
 					msg.text = "Organización y Planificación: 10 sobre 10. Trabajo en Equipo: 8 y medio sobre 10. Calidad de Procesos: 8 sobre 10. Proactividad: 8 sobre 10. Adaptación al Entorno: 6 y medio sobre 10. Experiencia: 6 sobre 10";
+					speechSynthesis.cancel();
 			        speechSynthesis.speak(msg);
 			      };
 			    var habEN = document.getElementById('habEN');
 				habEN.onclick = function () {
 					msg.lang = 'en';
 					msg.text = "Organization and Planning: 10 out of 10. Teamwork: 8 and a half out of 10. Process Quality: 8 out of 10. Proactivity: 8 out of 10. Adaptation to Environment: 6 and a half out of 10. Experience: 6 out of 10";
+					speechSynthesis.cancel();
 			        speechSynthesis.speak(msg);
 			      };
 			    var expES = document.getElementById('expES');
 				expES.onclick = function () {
 					msg.lang = 'es';
 					msg.text = "Doble Grado en ADE + Ingeniería Informática en la Universidad de Deusto. Movilidad Internacional en la Universidad de Bocconi. TFG de ADE en AquaDat, galardonado con el Premio Sebastián Iruretagoyena al mejor trabajo de fin de grado en ADE 2020-21. TFG de Ingeniería Informática en Vicomtech. Seleccionado para el programa Gipuzkoa Talent. Prácticas curriculares en Swap Energía. Cursando el programa onors Program. Voluntariado en Jesusen Atzetik Ibiltari (JAI). Voluntariado en Club de Montaña Aldapeta (CMA). Entrenador de Deporte Escolar.";
+					speechSynthesis.cancel();
 			        speechSynthesis.speak(msg);
 			      };
 			    var expEN = document.getElementById('expEN');
 				expEN.onclick = function () {
 					msg.lang = 'en';
 					msg.text = "Double Degree in Business Administration + Computer Engineering at Deusto University. International Mobility at Bocconi University. End-of-degree project in Business Administration at AquaDat, awarded with the Sebastián Iruretagoyena Award for the best final year project in Business Administration 2020-21. End-of-degree project in Computer Engineering at Vicomtech. Selected for the Gipuzkoa Talent Programme. Internship at Swap Energía. Coursing the Honors Program. Volunteering in Jesusen Atzetik Ibiltari (JAI). Volunteering at Club de Montaña Aldapeta (CMA). School Sport Coach";
+					speechSynthesis.cancel();
 			        speechSynthesis.speak(msg);
 			      };
 			    var profES = document.getElementById('profES');
 				profES.onclick = function () {
 					msg.lang = 'es';
 					msg.text = "Movilidad Internacional en la Universidad de Bocconi (Milán). Prácticas Extracurriculares en Vicomtech. Proyecto de Fin de Grado en ADE en AquaDat. Prácticas Curriculares en Swap Energía. Título de monitor de Tiempo Libre en Educación Infantil y Juvenil (Institut Valencià de la Joventut, IVAJ). ADE + Ingeniería Informática en la Universidad de Deusto (San Sebastián). Bachillerato en el Colegio Aldapeta María Ikastetxea (San Sebastián)";
+					speechSynthesis.cancel();
 			        speechSynthesis.speak(msg);
 			      };
 			    var profEN = document.getElementById('profEN');
 				profEN.onclick = function () {
 					msg.lang = 'en';
 					msg.text = "International Mobility at Bocconi University (Milan). Extracurricular Internships at Vicomtech. End-of-degree Project in Business Administration at AquaDat. Curricular Internship at Swap Energía. Certificate of Free Time Instructor in Children and Youth Education (Institut Valencià de la Joventut, IVAJ).. Business Administration + Computer Engineering at the University of Deusto (San Sebastián). High school at Aldapeta María Ikastetxea School (San Sebastián)";
+					speechSynthesis.cancel();
 			        speechSynthesis.speak(msg);
 			      };
 				var langES = document.getElementById('langES');
 			    langES.onclick = function () {
 					msg.lang = 'es';
 					msg.text = "Castellano: Lengua materna. Inglés: Certificado de Profisiensy en Inglés (nivel C2). Euskera: Euskeraren Gaitasun Aguiria (nivel C1)";
+					speechSynthesis.cancel();
 			        speechSynthesis.speak(msg);
 			      };
 			    var langEN = document.getElementById('langEN');
 			    langEN.onclick = function () {
 					msg.lang = 'en';
 					msg.text = "Spanish: Mother language. English: Certificate of Proficiency in English (level C2). Basque: Euskeraren Gaitasun Agiria (level C1)";
+					speechSynthesis.cancel();
 			        speechSynthesis.speak(msg);
 			      };	
 			    var contactES = document.getElementById('contactES');
 				contactES.onclick = function () {
 					msg.lang = 'es';
 					msg.text = "Para más información, quedo a su disposición en estos canales:";
+					speechSynthesis.cancel();
 			        speechSynthesis.speak(msg);
 			      };
 			    var contactEN = document.getElementById('contactEN');
 				contactEN.onclick = function () {
 					msg.lang = 'en';
 					msg.text = "For further information, I remain at your disposal on these channels:";
+					speechSynthesis.cancel();
 			        speechSynthesis.speak(msg);
 			      };		    
 		    </script>

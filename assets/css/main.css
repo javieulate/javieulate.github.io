@@ -3525,7 +3525,11 @@ body {
       filter: alpha(opacity=30);
     }
 
-h2:hover{
+.fa-volume-mute:hover{
+      opacity: 0.3;
+      filter: alpha(opacity=30);
+    }
+.fa-volume-up:hover{
       opacity: 0.3;
       filter: alpha(opacity=30);
     }
@@ -3544,6 +3548,8 @@ h2:hover{
 .barraIdioma{
 	display: inline; font-size: 2em;
 }
-#en-btn:active{
-	
+
+.langClick:checked + input {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
 }
