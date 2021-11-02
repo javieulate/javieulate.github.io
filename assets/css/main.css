@@ -3529,3 +3529,21 @@ summary:hover{
       opacity: 0.3;
       filter: alpha(opacity=30);
     }
+
+.fa-volume-mute{
+	float:right; margin-right: 0.2em; top: 50%; margin-top: 7px;
+
+}
+.fa-volume-up{
+	float:right; margin-right: 0.5em; top: 50%; margin-top: 7px;
+
+}
+.displayNone{
+	display: none;
+}
+.barraIdioma{
+	display: inline; font-size: 2em;
+}
+#en-btn:active{
+	
+}
