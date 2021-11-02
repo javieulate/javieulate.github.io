@@ -195,7 +195,7 @@
 						    	<h3 data-translatable>Nazioarteko Mugikortasuna Bocconiko Unibertsitatean (Milan) /i18n/ Movilidad Internacional en la Universidad de Bocconi (Milán) /i18n/ International Mobility at Bocconi University (Milan)</h3>
 						  	</div>
 						  	<div class="timeline-item" date-is='Feb 2021 - Jun 2021'>
-						    	<h3 data-translatable>Kurriculumetik kanpoko praktikak Vicomtechen /i18n/ Prácticas Extracurriculares en Vicomtech /i18n/ Extracurricular Internships at Vicomtech</h3>
+						    	<h3 data-translatable>Kurriculumetik kanpoko praktikak Vicomtechen /i18n/ Prácticas Extracurriculares en Vicomtech /i18n/ Extracurricular Internship at Vicomtech</h3>
 						  	</div>
 						  	<div class="timeline-item" date-is='Sept 2020 - Feb 2021'>
 						    	<h3 data-translatable>EAZko Gradu Amaierako Proiektua AquaDaten /i18n/ Proyecto de Fin de Grado en ADE en AquaDat /i18n/ End-of-degree Project in Business Administration at AquaDat</h3>
@@ -368,6 +368,14 @@
 		      eusButton.onclick = function () {
 		        i18n.changeLanguage('eus');
 		      };
+
+		      esButton.onclick = function () {
+		        i18n.changeLanguage('es');
+		      };
+
+		      enButton.onclick = function () {
+		        i18n.changeLanguage('en');
+		      };
 		    </script>
 		    <script>
 		    	function euskeraEZ() {
@@ -449,65 +457,12 @@
 		    </script>
 
 		    <script>
-		    	const IDIOMAS_PREFERIDOS = ["es-MX", "es-US", "es-ES", "es_US", "es_ES"];
-		    	var posibleIndice = 0, vocesDisponibles = [];
-
 		    	var msg = new SpeechSynthesisUtterance();
 				var voices = window.speechSynthesis.getVoices();
-				console.log({ vocesDisponibles }); 
+				msg.voices = voices[2];
 				msg.volume = 1; // From 0 to 1
-				msg.rate = 1.1; // From 0.1 to 10
-				msg.pitch = 1.2; // From 0 to 2
-
-		    	function cargarVoces (){
-				    if (vocesDisponibles.length > 0) {
-				      console.log("No se cargan las voces porque ya existen: ", vocesDisponibles);
-				      return;
-				    }
-				    vocesDisponibles = speechSynthesis.getVoices();
-				    posibleIndice = vocesDisponibles.findIndex(voz => IDIOMAS_PREFERIDOS.includes(voz.lang));
-				    if (posibleIndice === -1) posibleIndice = 0;
-				  };
-
-				cargarVoces();
-				  // Si hay evento, entonces lo esperamos
-				  if ('onvoiceschanged' in speechSynthesis) {
-				    speechSynthesis.onvoiceschanged = function () {
-				      cargarVoces();
-				      console.log({ vocesDisponibles });
-				      msg.voice = vocesDisponibles[2];
-				    };
-				  }
-
-				var esButton = document.getElementById('es-btn');
-		      	var enButton = document.getElementById('en-btn');
-				esButton.onclick = function () {
-				  i18n.changeLanguage('es');
-		          cargarVoces();
-				  // Si hay evento, entonces lo esperamos
-				  if ('onvoiceschanged' in speechSynthesis) {
-				    speechSynthesis.onvoiceschanged = function () {
-				      cargarVoces();
-				      console.log({ vocesDisponibles });
-				    };
-				  }
-				  msg.voice = vocesDisponibles[2];
-		        };
-
-			    enButton.onclick = function () {
-			      i18n.changeLanguage('en');
-			      cargarVoces();
-				  // Si hay evento, entonces lo esperamos
-				  if ('onvoiceschanged' in speechSynthesis) {
-				    speechSynthesis.onvoiceschanged = function () {
-				      cargarVoces();
-				      console.log({ vocesDisponibles });
-				    };
-				   
-				  }
-				  msg.voice = vocesDisponibles[6]; 
-			    };
-				
+				msg.rate = 1.3; // From 0.1 to 10
+				msg.pitch = 1.2; // From 0 to 2				
 				
 				var cancelPre = document.getElementById('cancelPre');
 				cancelPre.onclick = function () {
@@ -590,7 +545,7 @@
 			    var profEN = document.getElementById('profEN');
 				profEN.onclick = function () {
 					msg.lang = 'en';
-					msg.text = "International Mobility at Bocconi University (Milan). Extracurricular Internships at Vicomtech. End-of-degree Project in Business Administration at AquaDat. Curricular Internship at Swap Energía. Certificate of Free Time Instructor in Children and Youth Education (Institut Valencià de la Joventut, IVAJ).. Business Administration + Computer Engineering at the University of Deusto (San Sebastián). High school at Aldapeta María Ikastetxea School (San Sebastián)";
+					msg.text = "International Mobility at Bocconi University (Milan). Extracurricular Internship at Vicomtech. End-of-degree Project in Business Administration at AquaDat. Curricular Internship at Swap Energía. Certificate of Free Time Instructor in Children and Youth Education (Institut Valencià de la Joventut, IVAJ).. Business Administration + Computer Engineering at the University of Deusto (San Sebastián). High school at Aldapeta María Ikastetxea School (San Sebastián)";
 					speechSynthesis.cancel();
 			        speechSynthesis.speak(msg);
 			      };
