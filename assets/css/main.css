@@ -3525,7 +3525,7 @@ body {
       filter: alpha(opacity=30);
     }
 
-summary:hover{
+h2:hover{
       opacity: 0.3;
       filter: alpha(opacity=30);
     }
