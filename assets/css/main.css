@@ -3356,6 +3356,7 @@ p {
     height:100% !important;
     width:100% !important;
     position:absolute;
+    border:0;
 }
 
 /* Flecha arriba */
@@ -3552,4 +3553,34 @@ body {
 .langClick:checked + input {
   opacity: 0.3;
   filter: alpha(opacity=30);
+}
+
+.logopersonal {
+-webkit-transition:all .9s ease; /* Safari y Chrome */
+-moz-transition:all .9s ease; /* Firefox */
+-o-transition:all .9s ease; /* IE 9 */
+-ms-transition:all .9s ease; /* Opera */
+}
+
+.logopersonal:hover {
+-webkit-transform:scale(1.25);
+-moz-transform:scale(1.25);
+-ms-transform:scale(1.25);
+-o-transform:scale(1.25);
+transform:scale(1.25);
+}
+
+.avatar {
+-webkit-transition:all .9s ease; /* Safari y Chrome */
+-moz-transition:all .9s ease; /* Firefox */
+-o-transition:all .9s ease; /* IE 9 */
+-ms-transition:all .9s ease; /* Opera */
+}
+
+.avatar:hover {
+-webkit-transform:scale(1.15);
+-moz-transform:scale(1.15);
+-ms-transform:scale(1.15);
+-o-transform:scale(1.15);
+transform:scale(1.15);
 }
