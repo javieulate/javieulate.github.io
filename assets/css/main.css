@@ -3535,24 +3535,27 @@ body {
       filter: alpha(opacity=30);
     }
 
-.fa-volume-mute{
-	float:right; margin-right: 0.1em; top: 50%; margin-top: 7px;
-
+.audioIN{
+	position: absolute; 
+	right: 11em;
+	background: none;
+	border: none;
+	outline:none;
 }
-.fa-volume-up{
-	float:right; margin-right: 0.5em; top: 50%; margin-top: 7px;
 
+.audioOUT{
+	position: absolute; 
+	right: 8em;
+	background: none;
+	border: none;
+	outline:none;
 }
+
 .displayNone{
 	display: none;
 }
 .barraIdioma{
 	display: inline; font-size: 2em;
-}
-
-.langClick:checked + input {
-  opacity: 0.3;
-  filter: alpha(opacity=30);
 }
 
 .logopersonal {
@@ -3584,3 +3587,4 @@ transform:scale(1.25);
 -o-transform:scale(1.15);
 transform:scale(1.15);
 }
+
