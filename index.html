@@ -4,7 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="es">
 	<head>
 		<title>Javier Álvarez de Eulate de Santo Domingo</title>
 		<meta charset="utf-8" />
@@ -30,11 +30,7 @@
 			</header>
 		<!-- Main -->
 			<div id="main">
-				<div id="webreader" align="right">	
-					<h2><i class="fas fa-volume-mute" id="cancel"></i></h2>
-					<h2><i id="audioES" class="fas fa-volume-up"></i></h2>
-					<h2><i id="audioEN" class="fas fa-volume-up" style="display:none;"></i></h2>
-					<h2><i id="audioEUS" class="fas fa-volume-up" onclick="euskeraEZ()" style="display:none;"></i></h2>
+				<div id="webreader" align="right">		
 					<div id="eus-btn" class="pic">
 						<input type="image" title="Euskera" src="images/eus.PNG" width="55" height="18"/>
 					</div>
@@ -46,11 +42,20 @@
 			      	<div id="en-btn" class="pic">
 			      		<input type="image" title="English" src="images/en.PNG" width="45" height="18"/>
 			      	</div>
-			      	<h1 class="barraIdioma">&#124</h1>
 			    </div>
 				<details open>
 					<summary>
 						<h2 data-translatable>Itzulingurua  /i18n/ Preámbulo  /i18n/ Preamble </h2> <h2><i class="fas fa-hourglass-start"></i></h2>
+						<div class="audio">
+							<div align="right" class="pic">
+					      		<input id=preES type="image" src="images/audioIN.PNG" width="22" height="18"/>
+					      		<input id=preEN type="image" class="hidden" src="images/audioIN.PNG" width="22" height="18"/>
+					      		<input id=preEUS type="image" class="hidden" src="images/audioIN.PNG" width="22" height="18" onclick="euskeraEZ()"/>		
+							</div>
+							<div align="right" class="pic"> 
+								<input id=stopPre type="image" src="images/audioOFF.PNG" width="22" height="16"  />
+							</div>
+			      		</div>
 					</summary>
 					<section id="prefacio">
 						<p data-translatable>Eskaintzen zaizkigun aukerak gero eta handiagoak diren mundu honetan, bi gradu ikasi ahal izateko zortea izan nuen, oso ondo osatzen diren bi karrerekin: EAZ eta Informatika Ingeniaritza. /i18n/ En un mundo en el que cada vez más las posibilidades que se nos ofrecen son inmensas, tuve la suerte de poder estudiar un doble grado con dos carreras que se complementan muy bien: ADE e Ingeniería Informática. /i18n/ In a world where more and more possibilities are being offered to us, I was lucky enough to be able to study a double degree with two degrees that complement each other very well: Business Administration and Computer Engineering.</p>
@@ -61,7 +66,17 @@
 				</details>
 				<details>
 					<summary>
-						<h2 data-translatable>Trebetasunak  /i18n/ Habilidades  /i18n/ Skills </h2><h2><i class="fas fa-check-square"></i></h2>			
+						<h2 data-translatable>Trebetasunak  /i18n/ Habilidades  /i18n/ Skills </h2><h2><i class="fas fa-check-square"></i></h2>	
+						<div class="audio">
+							<div align="right" class="pic">
+					      		<input id=habES type="image" src="images/audioIN.PNG" width="22" height="18"/>
+					      		<input id=habEN type="image" class="hidden" src="images/audioIN.PNG" width="22" height="18"/>
+					      		<input id=habEUS type="image" class="hidden" src="images/audioIN.PNG" width="22" height="18" onclick="euskeraEZ()"/>		
+							</div>
+							<div align="right" class="pic"> 
+								<input id=stopHab type="image" src="images/audioOFF.PNG" width="22" height="16"  />
+							</div>
+			      		</div>		
 					</summary>
 					<section id="habilidades">
 						<div>
@@ -107,6 +122,16 @@
 					<details>
 					<summary>
 						<h2 data-translatable>Esperientzia  /i18n/ Experiencia  /i18n/ Experience </h2><h2><i class="fas fa-suitcase"></i></h2>
+						<div class="audio">
+							<div align="right" class="pic">
+					      		<input id=expES type="image" src="images/audioIN.PNG" width="22" height="18"/>
+					      		<input id=expEN type="image" class="hidden" src="images/audioIN.PNG" width="22" height="18"/>
+					      		<input id=expEUS type="image" class="hidden" src="images/audioIN.PNG" width="22" height="18" onclick="euskeraEZ()"/>		
+							</div>
+							<div align="right" class="pic"> 
+								<input id=stopExp type="image" src="images/audioOFF.PNG" width="22" height="16"  />
+							</div>
+			      		</div>
 					</summary>
 					<section id="experiencia">
 						<div class="row">
@@ -177,6 +202,16 @@
 					<details>
 					<summary>
 						<h2 data-translatable>Lanbide-Karrera  /i18n/ Carrera Profesional  /i18n/ Professional Career </h2><h2><i class="fas fa-calendar-alt"></i></h2>
+						<div class="audio">
+							<div align="right" class="pic">
+					      		<input id=profES type="image" src="images/audioIN.PNG" width="22" height="18"/>
+					      		<input id=profEN type="image" class="hidden" src="images/audioIN.PNG" width="22" height="18"/>
+					      		<input id=profEUS type="image" class="hidden" src="images/audioIN.PNG" width="22" height="18" onclick="euskeraEZ()"/>		
+							</div>
+							<div align="right" class="pic"> 
+								<input id=stopProf type="image" src="images/audioOFF.PNG" width="22" height="16"  />
+							</div>
+			      		</div>
 					</summary>
 					<section id="trayectoria">
 						<div class="container">
@@ -208,6 +243,16 @@
 					<details>
 					<summary>
 						<h2 data-translatable>Hizkuntzak  /i18n/ Idiomas  /i18n/ Languages  </h2><h2><i class="fas fa-language"></i></h2>
+						<div class="audio">
+							<div align="right" class="pic">
+					      		<input id=langES type="image" src="images/audioIN.PNG" width="22" height="18"/>
+					      		<input id=langEN type="image" class="hidden" src="images/audioIN.PNG" width="22" height="18"/>
+					      		<input id=langEUS type="image" class="hidden" src="images/audioIN.PNG" width="22" height="18" onclick="euskeraEZ()"/>		
+							</div>
+							<div align="right" class="pic"> 
+								<input id=stopLang type="image" src="images/audioOFF.PNG" width="22" height="16"  />
+							</div>
+			      		</div>
 					</summary>
 					<section id="idiomas">
 						<div class="table-wrapper">
@@ -238,17 +283,26 @@
 
 					<details>
 					<summary>
-						<h2 data-translatable>Kontaktua  /i18n/ Contacto  /i18n/ Contact </h2>
-						<h2><i class="far fa-address-book"></i></h2>
+						<h2 data-translatable>Kontaktua  /i18n/ Contacto  /i18n/ Contact </h2><h2><i class="far fa-address-book"></i></h2>
+						<div class="audio">
+							<div align="right" class="pic">
+					      		<input id=contES type="image" src="images/audioIN.PNG" width="22" height="18"/>
+					      		<input id=contEN type="image" class="hidden" src="images/audioIN.PNG" width="22" height="18"/>
+					      		<input id=contEUS type="image" class="hidden" src="images/audioIN.PNG" width="22" height="18" onclick="euskeraEZ()"/>		
+							</div>
+							<div align="right" class="pic"> 
+								<input id=stop type="image" src="images/audioOFF.PNG" width="22" height="16"  />
+							</div>
+			      		</div>
 					</summary>
 					<section id="contacto">
-						<blockquote data-translatable>Informazio gehiago nahi izanez gero, zure esanetara naukazu bide hauetan: /i18n/ Para más información, quedo a su disposición en estos canales: /i18n/ For further information, I remain at your disposal on these channels:</blockquote>
+						<blockquote id="contReader" data-translatable>Informazio gehiago nahi izanez gero, zure esanetara naukazu bide hauetan: /i18n/ Para más información, quedo a su disposición en estos canales: /i18n/ For further information, I remain at your disposal on these channels:</blockquote>
 						<p></p>
 						<div class="row">
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
 									<li>
-										<h3 data-translatable class="icon solid fa-mobile-alt"><span class="label">Telefono /i18n/ Teléfono /i18n/ Phone</span></h3>
+										<h3 class="icon solid fa-mobile-alt"><span class="label">Teléfono</span></h3>
 										<a href="tel:+34610801486"><span class="label">+34 610 810 486</span></a>
 									</li>
 									<li>
@@ -312,115 +366,15 @@
 			<script src="http://code.jquery.com/jquery-latest.js"></script>
 			<script src='https://cdn.rawgit.com/mburakerman/prognroll/master/src/prognroll.js'></script>
 			<script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+			<script src="assets/js/scroll.js"></script>
+			<script src="assets/js/dom-i18n.js"></script>
+		    <script src="assets/js/audio.js" defer></script>
 			<script type='text/javascript'>
 			$("body").prognroll({
 			    height: 5,        
 			    color: "#aa9d8c",
 			    custom: false     
 			});
-			</script>
-			<script type='text/javascript'>
-			$(document).ready(function(){ 
-			    $(window).scroll(function(){ 
-			        if ($(this).scrollTop() > 100) { 
-			            $('#scroll').fadeIn(); 
-			        } else { 
-			            $('#scroll').fadeOut(); 
-			        } 
-			    }); 
-			    $('#scroll').click(function(){ 
-			        $("html, body").animate({ scrollTop: 0 }, 600); 
-			        return false; 
-			    }); 
-			});
-			</script>
-			<script src="assets/js/dom-i18n.js"></script>
-		    <script>
-		      var eusButton = document.getElementById('eus-btn');
-		      var esButton = document.getElementById('es-btn');
-		      var enButton = document.getElementById('en-btn');
-		      var i18n = domI18n({
-		        selector: '[data-translatable]',
-		        separator: ' /i18n/ ',
-		        languages: ['eus', 'es', 'en'],
-		        defaultLanguage: 'es'
-		      });
-
-		      eusButton.onclick = function () {
-		        i18n.changeLanguage('eus');
-		      };
-
-		      esButton.onclick = function () {
-		        i18n.changeLanguage('es');
-		      };
-
-		      enButton.onclick = function () {
-		        i18n.changeLanguage('en');
-		      };
-		    </script>
-		    <script>
-		    	function euskeraEZ() {
-				  alert("Aukera ez dago eskuragarri, barkatu eragozpenak.");
-				}
-		    </script>
-		    <script>
-		      $(function(){
-		      	$('#eus-btn').click(function(){
-		          $('#cveus').show();
-		          $('#audioEUS').show();
-		          $('#cves').hide();
-		          $('#cven').hide();
-		          $('#audioES').hide();
-		          $('#audioEN').hide();
-		        });
-		        $('#es-btn').click(function(){
-		          $('#cves').show();
-		          $('#audioES').show();
-		          $('#cveus').hide();
-		          $('#cven').hide();
-		          $('#audioEUS').hide();
-		          $('#audioEN').hide();		       
-		        });
-		        $('#en-btn').click(function(){
-		          $('#cven').show();
-		          $('#audioEN').show();
-		          $('#preEN').show();
-		          $('#cves').hide();
-		          $('#audioES').hide();
-		          $('#audioEUS').hide();
-		        });
-		      })
-		    </script>
-
-		    </script>
-
-		    <script>
-		    	var msg = new SpeechSynthesisUtterance();
-				var voices = window.speechSynthesis.getVoices();
-				msg.voices = voices[2];
-				msg.volume = 1; // From 0 to 1
-				msg.rate = 1.1; // From 0.1 to 10
-				msg.pitch = 1.2; // From 0 to 2				
-				
-				var cancel = document.getElementById('cancel');
-				cancel.onclick = function () {
-			        speechSynthesis.cancel();
-			      };
-
-				var audioES = document.getElementById('audioES');
-				audioES.onclick = function () {
-					msg.lang = 'es';
-					msg.text = "Preámbulo. En un mundo en el que cada vez más las posibilidades que se nos ofrecen son inmensas, tuve la suerte de poder estudiar un doble grado con dos carreras que se complementan muy bien: ADE e Ingeniería Informática. Mi experiencia en la Universidad ha sido muy positiva, tanto a nivel académico como personal, y ahora que me encuentro en los últimos compases de mi formación, veo con mayor claridad hacia dónde me gustaría orientar mi futuro profesional. Respecto al grado en ADE, tengo especial predilección por el mundo financiero, sin embargo, estoy abierto a cualquier otra área en la que me resultaría muy interesante poder aplicar mis conocimientos en Ingeniería Informática. Respecto a este segundo grado, tengo particular interés en los ámbitos de Ciberseguridad y gestión de Bases de Datos. Considero que ADE e Ingeniería Informática están obligadas a entenderse, más aún en un contexto encaminado a que las diversas organizaciones desarrollen su actividad económica de forma remota. Por eso, creo adecuado que las empresas se apoyen en profesionales que, al contar con este doble perfil, puedan aportar una visión global de ambas disciplinas intentando así sumar nuevas posibilidades a las que ya existen en el mundo actual. Habilidades. Organización y Planificación: 10 sobre 10. Trabajo en Equipo: 8 y medio sobre 10. Calidad de Procesos: 8 sobre 10. Proactividad: 8 sobre 10. Adaptación al Entorno: 6 y medio sobre 10. Experiencia: 6 sobre 10. Experiencia. Doble Grado en ADE + Ingeniería Informática en la Universidad de Deusto. Movilidad Internacional en la Universidad de Bocconi. TFG de ADE en AquaDat, galardonado con el Premio Sebastián Iruretagoyena al mejor trabajo de fin de grado en ADE 2020-21. TFG de Ingeniería Informática en Vicomtech. Seleccionado para el programa Gipuzkoa Talent. Prácticas curriculares en Swap Energía. Cursando el programa onors Program. Voluntariado en Jesusen Atzetik Ibiltari (JAI). Voluntariado en Club de Montaña Aldapeta (CMA). Entrenador de Deporte Escolar. Carrera Profesional. Movilidad Internacional en la Universidad de Bocconi (Milán). Prácticas Extracurriculares en Vicomtech. Proyecto de Fin de Grado en ADE en AquaDat. Prácticas Curriculares en Swap Energía. Título de monitor de Tiempo Libre en Educación Infantil y Juvenil (Institut Valencià de la Joventut, IVAJ). ADE + Ingeniería Informática en la Universidad de Deusto (San Sebastián). Bachillerato en el Colegio Aldapeta María Ikastetxea (San Sebastián). Contacto. Idiomas. Castellano: Lengua materna. Inglés: Certificado de Profisiensy en Inglés (nivel C2). Euskera: Euskeraren Gaitasun Aguiria (nivel C1). Contacto. Para más información, quedo a su disposición en estos canales:";
-					speechSynthesis.cancel();
-			        speechSynthesis.speak(msg);
-			      };
-			    var audioEN = document.getElementById('audioEN');
-				audioEN.onclick = function () {
-					msg.lang = 'en';
-					msg.text = "Preamble. In a world where more and more possibilities are being offered to us, I was lucky enough to be able to study a double degree with two degrees that complement each other very well: Business Administration and Computer Engineering. My experience at the University has been very positive, both academically and personally, and now that I am in the final stages of my education, I see more clearly where I would like to direct my professional future. Regarding the Business Administration degree, I have a special predilection for the financial world, however, I am open to any other area in which I would be very interesting to apply my knowledge in Computer Engineering. Regarding this second degree, I am particularly interested in the areas of Cybersecurity and Database management. I believe that Business Administration and Computer Engineering are obliged to understand each other, even more so in a context in which the various organizations develop their economic activity remotely. Therefore, I think it is appropriate for companies to rely on professionals who, having this dual profile, can provide a global vision of both disciplines, thus trying to add new possibilities to those that already exist in today's world. Skills. Organization and Planning: 10 out of 10. Teamwork: 8 and a half out of 10. Process Quality: 8 out of 10. Proactivity: 8 out of 10. Adaptation to Environment: 6 and a half out of 10. Experience: 6 out of 10. Experience. Double Degree in Business Administration + Computer Engineering at Deusto University. International Mobility at Bocconi University. End-of-degree project in Business Administration at AquaDat, awarded with the Sebastián Iruretagoyena Award for the best final year project in Business Administration 2020-21. End-of-degree project in Computer Engineering at Vicomtech. Selected for the Gipuzkoa Talent Programme. Internship at Swap Energía. Coursing the Honors Program. Volunteering in Jesusen Atzetik Ibiltari (JAI). Volunteering at Club de Montaña Aldapeta (CMA). School Sport Coach. Proffesional Career. International Mobility at Bocconi University (Milan). Extracurricular Internship at Vicomtech. End-of-degree Project in Business Administration at AquaDat. Curricular Internship at Swap Energía. Certificate of Free Time Instructor in Children and Youth Education (Institut Valencià de la Joventut, IVAJ).. Business Administration + Computer Engineering at the University of Deusto (San Sebastián). High school at Aldapeta María Ikastetxea School (San Sebastián). Languages. Spanish: Mother language. English: Certificate of Proficiency in English (level C2). Basque: Euskeraren Gaitasun Agiria (level C1). Contact. For further information, I remain at your disposal on these channels:";
-					speechSynthesis.cancel();
-			        speechSynthesis.speak(msg);
-			      };
-		    </script>
+			</script>		
 	</body>
 </html>

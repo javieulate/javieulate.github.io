@@ -186,3 +186,96 @@
 
 }));
 
+var eusButton = document.getElementById('eus-btn');
+var esButton = document.getElementById('es-btn');
+var enButton = document.getElementById('en-btn');
+var i18n = domI18n({
+selector: '[data-translatable]',
+separator: ' /i18n/ ',
+languages: ['eus', 'es', 'en'],
+defaultLanguage: 'es'
+});
+
+eusButton.onclick = function () {
+i18n.changeLanguage('eus');
+};
+
+esButton.onclick = function () {
+i18n.changeLanguage('es');
+};
+
+enButton.onclick = function () {
+i18n.changeLanguage('en');
+};
+
+$(function(){
+  $('#eus-btn').click(function(){
+    $('#cveus').show();
+    $('#preEUS').show();
+    $('#profEUS').show();
+    $('#habEUS').show();
+    $('#langEUS').show();
+    $('#expEUS').show();
+    $('#contEUS').show();
+    $('#cves').hide();
+    $('#cven').hide();
+    $('#preES').hide();
+    $('#profES').hide();
+    $('#habES').hide();
+    $('#langES').hide();
+    $('#expES').hide();
+    $('#contES').hide();
+    $('#preEN').hide();
+    $('#profEN').hide();
+    $('#habEN').hide();
+    $('#langEN').hide();
+    $('#expEN').hide();
+    $('#contEN').hide();
+  });
+  $('#es-btn').click(function(){
+    $('#cves').show();
+    $('#preES').show();
+    $('#profES').show();
+    $('#habES').show();
+    $('#langES').show();
+    $('#contES').show();
+    $('#expES').show();
+    $('#cveus').hide();
+    $('#cven').hide();
+    $('#preEUS').hide();
+    $('#profEUS').hide();
+    $('#habEUS').hide();
+    $('#langEUS').hide();
+    $('#expEUS').hide();
+    $('#contEUS').hide();
+    $('#preEN').hide();
+    $('#profEN').hide();
+    $('#habEN').hide();
+    $('#langEN').hide();
+    $('#expEN').hide();
+    $('#contEN').hide();
+  });
+  $('#en-btn').click(function(){
+    $('#cven').show();
+    $('#preEN').show();
+    $('#profEN').show();
+    $('#expEN').show();
+    $('#habEN').show();
+    $('#langEN').show();
+    $('#contEN').show();
+    $('#cveus').hide();
+    $('#cves').hide();
+    $('#preES').hide();
+    $('#profES').hide();
+    $('#habES').hide();
+    $('#langES').hide();
+    $('#expES').hide();
+    $('#contES').hide();
+    $('#preEUS').hide();
+    $('#profEUS').hide();
+    $('#habEUS').hide();
+    $('#langEUS').hide();
+    $('#expEUS').hide();
+    $('#contEUS').hide();
+  });
+})

@@ -151,7 +151,7 @@ function closeSubmenu(e) {
     menu.querySelector(".submenu-active").classList.remove("submenu-active");
   }
 }
-/* Event Listeners */
+/* Event Listeners 
 toggle.addEventListener("click", toggleMenu, false);
 for (let item of items) {
   if (item.querySelector(".submenu")) {
@@ -160,4 +160,4 @@ for (let item of items) {
   item.addEventListener("keypress", toggleItem, false);
 }
 document.addEventListener("click", closeSubmenu, false);
-
+*/
